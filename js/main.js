@@ -11,6 +11,10 @@ let result;
 let numberToAdd;
 let newValue;
 
+//----- add event listeners to buttons -----
+    //button add adds value to result
+        //grab number that is in result and add numberToAdd
+        //print resulting number to result div
 addButton.addEventListener("click", function(e) {
     console.log("is add button working?")
 
@@ -29,10 +33,25 @@ addButton.addEventListener("click", function(e) {
 
     document.getElementById("result").textContent = newValue;
 });
-//add event listeners to buttons
-    //button add adds value to result
-        //grab number that is in result and add numberToAdd
-        //print resulting number to result div
+
     //button subtract subtracts value from result
         //print resulting number to result div
 
+subtractButton.addEventListener("click", function(e) {
+    console.log("is subtract button working?")
+
+    e.preventDefault();
+
+//grab the value of input and set it to a variable
+    numberToSubtract = Number(input.value);
+    console.log("this is the number to add: " + numberToSubtract);
+
+//grab the current showing result
+    result = Number(document.getElementById("result").innerHTML);
+    console.log("this is the result value: " + result);
+
+    newValue = result -= numberToSubtract;
+    console.log(newValue);
+
+    document.getElementById("result").textContent = newValue;
+});

@@ -1,6 +1,4 @@
 //declare DOM variables
-
-let functions = document.querySelector("functions");
 let input = document.querySelector("input");
 let addButton = document.querySelector("#add");
 let subtractButton = document.querySelector("#subtract");
@@ -8,10 +6,12 @@ let subtractButton = document.querySelector("#subtract");
 //declare what result will be
 let result;
 
+//declare other useful variables
 let numberToAdd;
+let numberToSubtract;
 let newValue;
 
-//----- add event listeners to buttons -----
+//add event listeners to buttons
     //button add adds value to result
         //grab number that is in result and add numberToAdd
         //print resulting number to result div
@@ -35,8 +35,8 @@ addButton.addEventListener("click", function(e) {
 });
 
     //button subtract subtracts value from result
+        //grab number that is in result and subtract numberToSubtract
         //print resulting number to result div
-
 subtractButton.addEventListener("click", function(e) {
     console.log("is subtract button working?")
 
@@ -54,4 +54,9 @@ subtractButton.addEventListener("click", function(e) {
     console.log(newValue);
 
     document.getElementById("result").textContent = newValue;
+
+    if (newValue < 0) {
+        document.getElementById("result").style.color = "red";
+    };
 });
+

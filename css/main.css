@@ -1,12 +1,20 @@
 * {
     text-align: center;
     font-family: sans-serif;
-    margin: 0 auto;
-    font-size: 75px;
 }
 
 #display {
     margin: 50px;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+#functions {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
 }
 
 .button {
@@ -16,9 +24,10 @@
     height: 100px;
     width: 100px;
     padding-bottom: 30px;
+    font-size: 75px;
 }
 
-.button :hover {
+.button:hover {
     background-color: white;
     border: 1px solid darkgrey;
     color: darkgrey;
@@ -29,4 +38,11 @@ input {
     height: 100px;
     width: 200px;
     border-radius: 8px;
+    font-size: 75px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#negative {
+    color: red;
 }
